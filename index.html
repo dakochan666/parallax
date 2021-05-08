@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" href="assets/Logo_Gereja_Sederhana___Melingkar_Cokelat_dan_Krem-removebg-preview.png" />
+</head>
+<body>
+    <audio controls loop autoplay style="display: none;">
+        <source src="assets/Stand By Me - Music Travel Love (Ben E. King Cover).mp3" type="audio/mp3" />
+    </audio>
+    <header id="header">
+        <a href="#" class="logo">Vivi | Adrian</a>
+        <ul>
+            <li ><a href="#" class="active">Home</a></li>
+            <li ><a href="#">About</a></li>
+            <li ><a href="#">Documentation</a></li>
+        </ul>
+    </header>
+    <section>
+        <h2 id="text"><span>Love is an</span><br>Adventure</h2>
+        <img src="assets/bird1.png" id="bird1">
+        <img src="assets/bird2.png" id="bird2">
+        <img src="assets/forest.png" id="forest">
+        <a href="#" id="btn">Explore</a>
+        <img src="assets/rocks.png" id="rocks">
+        <img src="assets/water.png" id="water">
+    </section>
+    <img src="assets/squirdo.gif" id="squirdo">
+    <div class="date">
+        May 8th, 2018 and still counting...
+    </div>
+    <div class="sec">
+        <h2>Thanks for The Memories</h2>
+        <p>My Dearest Vivi,</p>
+        <br>
+        <p>First and foremost, happy anniversary! Time flies so fast since our very first met. I can still remember the first time I saw you. Met on a beautiful beach, acquainted in my usual way. You tell stories and then I make jokes about you. Other women must have been </p><p>annoyed haha. Even it's awkward I asked you to breakfast together and from </p><p>there it all began.</p>
+        <br>
+        <p>It was three years ago tonight that I first told you and asked you to be </p><p> my girlfriend. You changed my life that night and put us on a path that has </p><p>brought us such joy. Because you are the lights that lights up my day. </p><p>There's not another man in the world that can hold a candle to you, and </p><p>I just wanted to let you know that I love you more than even the most heartfelt </p><p>words can express.</p>
+        <br>
+        <p>I like my days with you, feel happier and more meaningful. I no longer live because I have to live, but more than that you give me a purpose. I hope we are together forever and try to keep each other and happily ever after like we're in a fairy tale.</p>
+        <br>
+        <p>With love from the one who adores you,</p>
+        <br>
+        <p>Adrian Muhammad Kuncoro</p>
+    </div>
+    <div class="container">
+        <img src="assets/Cerita Instagram Bingkai PolaroidFilm Tumpukan Pantai.png" alt="">
+    </div>
+
+    <script>
+        let text = document.getElementById('text');
+        let bird1 = document.getElementById('bird1');
+        let bird2 = document.getElementById('bird2');
+        let btn = document.getElementById('btn');
+        let rocks = document.getElementById('rocks');
+        let forest = document.getElementById('forest');
+        let water = document.getElementById('water');
+        let header = document.getElementById('header');
+        let date = document.getElementsByClassName('date');
+
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY;
+
+            text.style.top = 50 + value * -0.5 + '%';
+            bird1.style.top = value * -1.5 + 'px';
+            bird1.style.left = value * 2 + 'px';
+            bird2.style.top = value * -1.5 + 'px';
+            bird2.style.left = value * -5 + 'px';
+            btn.style.marginTop = value * 1.2 + 'px';
+            rocks.style.top = value * -0.12 + 'px';
+            forest.style.top = value * 0.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        });
+
+        $(window).scroll(function() {
+            $("squirdo").each(function() {
+                if (isScrolledIntoView(this) === true) {
+                    $(this).addClass("fadeInLeft");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
